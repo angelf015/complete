@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head th:replace="commons/dependencies::dependencies-head">
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<div class="row" th:replace="commons/contacto::fgContacto"></div>
+<div class="row" th:replace="commons/menu::fgmenu"></div>
+
+
+<h1>Result</h1>
+<p th:text="'id: ' + ${greeting.id}"/>
+<p th:text="'content: ' + ${greeting.content}"/>
+<a href="/greeting">Submit another message</a>
+
+
+<nav class="navbar fixed-bottom navbar-dark d-md-none d-md-block" style="background-color: #333E48; border:none !important; margin:0 !important;">
+    <div class="container">
+        <table style="width:100%; height:60px">
+            <tbody>
+            <tr>
+                <td class="text-center" style="width:20%">
+                    <p class="lnk-007"><a class="col-010 lnk-007" href="documents/productos-cuentas" data-uw-rm-brl="false">Quiero una Cuenta</a></p>
+                </td>
+                <td class="text-center" style="width:20%">
+                    <p class="lnk-007"><a class="col-010 lnk-007" href="documents/productos-inversiones" data-uw-rm-brl="false">Quiero Invertir</a></p>
+                </td>
+                <td class="bkg-004 text-center" style="width:20%"><a href="/" data-uw-rm-brl="false"><img class="img-responsive center-block" src="../image/bx-logo-mobile.png" alt="first aid" data-uw-rm-ima="ai"></a></td>
+                <td class="text-center" style="width:20%">
+                    <p class="lnk-007"><a class="col-010 lnk-007" href="documents/productos-creditos" data-uw-rm-brl="false">Quiero Crédito</a></p>
+                </td>
+                <td class="text-center" style="width:20%">
+                    <p class="lnk-007"><a class="col-010 lnk-007" href="documents/productos-seguros" data-uw-rm-brl="false">Quiero un seguro</a></p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</nav>
+
+
+<div th:replace="commons/dependencies::dependencies-body">
+</div>
+</body>
+</html>
+

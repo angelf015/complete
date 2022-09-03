@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="commons/dependencies::dependencies-head">
+
+</head>
+<body>
+<div class="row" th:replace="commons/contacto::fgContacto"></div>
+<div class="row" th:replace="commons/menu::fgmenu"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="row" style="padding-top: 1%; padding-right: 1%; padding-left: 1%">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6">
+                    <label for="txtIdAgente" class="form-label">Id Agente</label>
+                    <input type="text" class="form-control" id="txtIdAgente">
+                    <div class="invalid-feedback" id="divtxtIdAgente"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="txtOficina" class="form-label">Oficina</label>
+                    <input type="text" class="form-control" id="txtOficina">
+                    <div class="invalid-feedback" id="divtxtOficina"></div>
+                </div>
+                <div class="col-4">
+                    <label for="inputAddress" class="form-label">Vigencia Desde</label>
+                    <input type="date" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <div class="invalid-feedback" id="divinputAddress"></div>
+                </div>
+                <div class="col-4">
+                    <label for="inputAddress2" class="form-label">Vigencia Hasta</label>
+                    <input type="date" class="form-control" id="inputAddress2"
+                           placeholder="Apartment, studio, or floor">
+                    <div class="invalid-feedback" id="divinputAddress2"></div>
+                </div>
+                <div class="col-md-4">
+                    <label for="slcPersona" class="form-label">Persona</label>
+                    <select id="slcPersona" class="form-select">
+                        <option value="" selected>Seleccione...</option>
+                        <option value="F">Fisica</option>
+                        <option value="M">Moral</option>
+                    </select>
+                    <div class="invalid-feedback" id="divslcPersona"></div>
+                </div>
+                <div class="row" id="personaMoral">
+                    <div class="col-12">
+                        <label for="txtRazonSocial" class="form-label">Razón Social</label>
+                        <input type="text" class="form-control" id="txtRazonSocial">
+                        <div class="invalid-feedback" id="divtxtRazonSocial"></div>
+                    </div>
+
+                </div>
+                <div class="row" id="personaFisica">
+                    <div class="col-6">
+                        <label for="txtNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="txtNombre">
+                        <div class="invalid-feedback" id="divtxtNombre"></div>
+                    </div>
+                    <div class="col-6">
+                        <label for="txtPaterno" class="form-label">Ap. Paterno</label>
+                        <input type="text" class="form-control" id="txtPaterno">
+                        <div class="invalid-feedback" id="divtxtPaterno"></div>
+                    </div>
+                    <div class="col-6">
+                        <label for="txtMaterno" class="form-label">Ap. Materno</label>
+                        <input type="text" class="form-control" id="txtMaterno">
+                        <div class="invalid-feedback" id="divtxtMaterno"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Continuar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div th:replace="commons/dependencies::dependencies-body">
+</div>
+
+<script th:inline="javascript">
+    const properties = /*[[${propertiesFields}]]*/ null;
+</script>
+<script th:src="@{/js/FieldsProperties.js}"></script>
+</body>
+</html>

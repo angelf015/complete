@@ -1,0 +1,53 @@
+{
+  "Nombre": "DatosObra",
+  "listaCampos": [
+    {
+      "idCampo": "txtIdAgente",
+      "type": "input",
+      "ValorDefault": "122343",
+      "readOnly": false,
+      "Requerido": true,
+      "Convertir": "Mayusculas/Minusculas/No",
+      "ExpresionRegular": "^[0-9]+$",
+      "MinimoCaracteres": "5",
+      "MaximoCaracteres": "200",
+      "MensajeError": "Este es un mensaje de error que viene del JSON"
+    },
+    {
+      "idCampo": "slcPersona",
+      "type": "select",
+      "ValorDefault": null,
+      "readOnly": false,
+      "Requerido": true,
+      "Convertir": "Mayusculas/Minusculas/No",
+      "ExpresionRegular": null,
+      "MinimoCaracteres": null,
+      "MaximoCaracteres": null,
+      "MensajeError": "Este es un mensaje de error que viene del JSON para slcPersona"
+    },
+    {
+      "idCampo": "vigenciaDesde",
+      "type": "date",
+      "ValorDefault": "today",
+      "readOnly": false,
+      "Requerido": "true",
+      "Convertir": "Mayusculas/Minusculas/No",
+      "ExpresionRegular": "^[0-9]+$",
+      "MinimoCaracteres": null,
+      "MaximoCaracteres": null,
+      "MensajeError": "bla bla bla"
+    },
+    {
+      "idCampo": "vigenciaDesde",
+      "type": "date",
+      "ValorDefault": "today",
+      "readOnly": false,
+      "Requerido": "true",
+      "Convertir": "Mayusculas/Minusculas/No",
+      "ExpresionRegular": "^[0-9]+$",
+      "MinimoCaracteres": null,
+      "MaximoCaracteres": null,
+      "MensajeError": "bla bla bla"
+    }
+  ]
+}

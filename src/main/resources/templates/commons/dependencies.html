@@ -1,0 +1,79 @@
+<!-- SE DECLARAN LAS DEPENDENCIAS DE IMAGENES Y CSS GLOBALES PARA EL SITIO -->
+<head th:fragment="dependencies-head">
+    <meta http-equiv="Content-Type"    content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; IE=10;"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title page-title></title>
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="icon" type="image/ico" href="./favicon.ico">
+    <link rel="apple-touch-icon" sizes="60x60" th:href="@{/image/apple-icon-60x60.png}">
+    <link rel="apple-touch-icon" sizes="72x72" th:href="@{/image/apple-icon-72x72.png}">
+    <link rel="apple-touch-icon" sizes="76x76" th:href="@{/image/apple-icon-76x76.png}">
+    <link rel="apple-touch-icon" sizes="114x114" th:href="@{/image/apple-icon-114x114.png}">
+    <link rel="apple-touch-icon" sizes="120x120" th:href="@{/image/apple-icon-120x120.png}">
+    <link rel="apple-touch-icon" sizes="144x144" th:href="@{/image/apple-icon-144x144.png}">
+    <link rel="apple-touch-icon" sizes="152x152" th:href="@{/image/apple-icon-152x152.png}">
+    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/image/apple-icon-180x180.png}">
+    <link rel="icon" type="image/png" sizes="192x192"  th:href="@{/image/android-icon-192x192.png}">
+    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/image/favicon-32x32.png}">
+    <link rel="icon" type="image/png" sizes="96x96" th:href="@{/image/favicon-96x96.png}">
+    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/image/favicon-16x16.png}">
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- build:css(.) plugins/sweetalert/sweetalert.css -->
+    <link rel="stylesheet" th:href="@{/css/sweetalert/sweetalert.css}" />
+    <!-- endbuild -->
+
+
+    <!-- build:css(.) plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css -->
+    <link rel="stylesheet" th:href="@{/css/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css}" />
+    <!-- endbuild -->
+
+    <!-- build:css(.) plugins/font-awesome/font-awesome.css -->
+    <link rel="stylesheet" th:href="@{/css/font-awesome/font-awesome.min.css}" />
+    <!-- endbuild -->
+
+
+    <link rel="stylesheet" th:href="@{/css/animate.css}">
+
+    <link rel="stylesheet" th:href="@{/css/nav.css}" />
+</head>
+<!-- FIN DECLARACIONES  -->
+
+<!-- SE DECLARAN LAS DEPENDENCIAS DE JAVASCRIPT -->
+<div th:fragment="dependencies-body">
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script th:src="@{/js/jquery.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<!--<script th:src="@{/bower_components/underscore/underscore.js}"></script>-->
+
+<!-- endbower -->
+
+<!-- build:js(.) plugins/sweetalert/sweetalert.js -->
+<script th:src="@{/js/sweetalert/sweetalert.min.js}"></script>
+<!-- endbuild -->
+
+
+<script th:inline="javascript">
+    /* FUNCION PARA DESACTIVAR LOS ENTER EN INPUTS */
+    function desactivarEnterInputs(evt) {
+        var evt = (evt) ? evt : ((event) ? event : null);
+        var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+        if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+    }
+
+    document.onkeypress = desactivarEnterInputs;
+    /* FUNCION PARA DESACTIVAR LOS ENTER EN INPUTS */
+</script>
+
+</div>
+<!-- FINALIZAN DECLARACIONES GLOBALES JS -->
