@@ -15,6 +15,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import static com.example.handlingformsubmission.configuration.Global.*;
 
 @Controller
 public class GreetingController {
@@ -107,12 +108,13 @@ public class GreetingController {
         return model;
     }
 
-    @GetMapping()
+    @GetMapping("index")
     ModelAndView index(@CookieValue(name = "token", required = false) String token) {
 
         // Válida el token, en caso de que el token NO SEA VÁLIDO redirecciona al login. Si el token es VÁLIDO redirecciona al home (vista result)
         ModelAndView model = new ModelAndView(greetingService.validToken(token, "index")).addObject("propertiesFields", readJson());
-        model.addObject("greeting", new Greeting());
+        model.addObject("greeting", new Greeting())
+                .addObject("global", variableglobal1);
 
         return model;
     }
