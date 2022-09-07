@@ -8,7 +8,5 @@ import com.example.handlingformsubmission.dto.View;
 public interface ValidationPropTestService<T> {
     GenericResponseGlobal<T> validaDatos(View view, T t);
 
-    GenericResponse valida(CamposDTO campos);
-
     View readJson();
 }

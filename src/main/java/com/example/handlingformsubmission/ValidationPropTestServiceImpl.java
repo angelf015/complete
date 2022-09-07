@@ -18,23 +18,6 @@ import java.util.regex.Pattern;
 public class ValidationPropTestServiceImpl<T> implements ValidationPropTestService<T> {
 
     @Override
-    public GenericResponse valida(CamposDTO campos) {
-        GenericResponse response = new GenericResponse();
-        View view = readJson();
-
-//        Se realizan las validaciones
-        GenericResponseGlobal<T> generic = validaDatos(view, (T) campos);
-
-        ObjectMapper mapper = new ObjectMapper();
-        //Se obtiene el DTO original, pero con cambios de mayúsculas o minúsculas según se haya especificado en las reglas
-        campos = mapper.convertValue(generic.getT(), CamposDTO.class);
-
-        response.setError(generic.getError());
-        response.setIdError(generic.getIdError());
-        return response;
-    }
-
-    @Override
     public View readJson() {
         View view = new View();
         //JSON parser object to parse read file

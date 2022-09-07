@@ -2,9 +2,6 @@ package com.example.handlingformsubmission;
 
 import com.example.handlingformsubmission.dto.CamposDTO;
 import com.example.handlingformsubmission.dto.GenericResponse;
-import com.example.handlingformsubmission.dto.GenericResponseGlobal;
-import com.example.handlingformsubmission.dto.View;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,11 +11,11 @@ import static com.example.handlingformsubmission.configuration.Global.*;
 @RequestMapping("app")
 public class TestController {
 
-    private final ValidationPropTestService validationPropTestService;
+    private final TestService testService;
 
     @Autowired
-    public TestController(ValidationPropTestService validationPropTestService) {
-        this.validationPropTestService = validationPropTestService;
+    public TestController(TestService testService) {
+        this.testService = testService;
     }
 
     @GetMapping("add/{value}")
@@ -43,7 +40,7 @@ public class TestController {
         campos.setVigenciaDesde("25/12/2022");
         campos.setVigenciaHasta("25/11/2022");
 //        Se realizan las validaciones
-        return validationPropTestService.valida(campos);
+        return testService.valida(campos);
     }
 
 }
