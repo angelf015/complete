@@ -7,11 +7,11 @@
       "ValorDefault": "122343",
       "readOnly": false,
       "Requerido": true,
-      "Convertir": "Mayusculas/Minusculas/No",
+      "Convertir": null,
       "ExpresionRegular": "^[0-9]+$",
       "MinimoCaracteres": "5",
       "MaximoCaracteres": "200",
-      "MensajeError": "Este es un mensaje de error que viene del JSON"
+      "MensajeError": "Deben ser números del 1 al 9"
     },
     {
       "idCampo": "slcPersona",
@@ -19,31 +19,31 @@
       "ValorDefault": null,
       "readOnly": false,
       "Requerido": true,
-      "Convertir": "Mayusculas/Minusculas/No",
+      "Convertir": "Mayusculas",
       "ExpresionRegular": null,
       "MinimoCaracteres": null,
       "MaximoCaracteres": null,
-      "MensajeError": "Este es un mensaje de error que viene del JSON para slcPersona"
+      "MensajeError": "Deben ser Mayúsculas"
     },
     {
       "idCampo": "vigenciaDesde",
       "type": "date",
       "ValorDefault": "today",
       "readOnly": false,
-      "Requerido": "true",
-      "Convertir": "Mayusculas/Minusculas/No",
+      "Requerido": true,
+      "Convertir": null,
       "ExpresionRegular": "^[0-9]+$",
       "MinimoCaracteres": null,
       "MaximoCaracteres": null,
       "MensajeError": "bla bla bla"
     },
     {
-      "idCampo": "vigenciaDesde",
+      "idCampo": "vigenciaHasta",
       "type": "date",
       "ValorDefault": "today",
       "readOnly": false,
-      "Requerido": "true",
-      "Convertir": "Mayusculas/Minusculas/No",
+      "Requerido": true,
+      "Convertir": null,
       "ExpresionRegular": "^[0-9]+$",
       "MinimoCaracteres": null,
       "MaximoCaracteres": null,
