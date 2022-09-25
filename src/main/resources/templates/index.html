@@ -22,15 +22,15 @@
                     <div class="invalid-feedback" id="divtxtOficina"></div>
                 </div>
                 <div class="col-4">
-                    <label for="inputAddress" class="form-label">Vigencia Desde</label>
-                    <input type="date" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                    <div class="invalid-feedback" id="divinputAddress"></div>
+                    <label for="vigenciaDesde" class="form-label">Vigencia Desde</label>
+                    <input type="date" class="form-control" id="vigenciaDesde" placeholder="1234 Main St">
+                    <div class="invalid-feedback" id="divvigenciaDesde"></div>
                 </div>
                 <div class="col-4">
-                    <label for="inputAddress2" class="form-label">Vigencia Hasta</label>
-                    <input type="date" class="form-control" id="inputAddress2"
+                    <label for="vigenciaHasta" class="form-label">Vigencia Hasta</label>
+                    <input type="date" class="form-control" id="vigenciaHasta"
                            placeholder="Apartment, studio, or floor">
-                    <div class="invalid-feedback" id="divinputAddress2"></div>
+                    <div class="invalid-feedback" id="divvigenciaHasta"></div>
                 </div>
                 <div class="col-md-4">
                     <label for="slcPersona" class="form-label">Persona</label>
@@ -69,10 +69,21 @@
                 </div>
 
 
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Continuar</button>
-                </div>
+
             </form>
+            <div class="col-12">
+                <button type="button" class="btn btn-primary" onclick="submit()">Continuar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="/image/Loading_icon.gif">
+            </div>
         </div>
     </div>
 </div>

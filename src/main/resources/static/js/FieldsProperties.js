@@ -1,12 +1,13 @@
 $(function () {
     // let jsonProperties = JSON.parse(properties);
     read(properties.listaCampos);
+    // $('#loader').hide();
 });
 
 function read(obj) {
     for (let k in obj) {
         if (obj[k] instanceof Object) {
-            console.log(obj[k]);
+            // console.log(obj[k]);
             loadInput(obj[k])
         }
     }
@@ -31,13 +32,13 @@ function loadInput(obj) {
     if (obj.requerido)
         $('#' + obj.idCampo).prop('required', true);
 
-    let div = document.getElementById('div' + obj.idCampo);
+    var div = document.getElementById('div' + obj.idCampo);
     div.innerHTML = obj.mensajeError;
 }
 
 
 // Ejemplo de JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
-(function () {
+/*(function () {
     'use strict'
 
     // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
@@ -55,4 +56,19 @@ function loadInput(obj) {
                 form.classList.add('was-validated')
             }, false)
         })
-})()
+})();*/
+
+function submit() {
+    let form = document.querySelector(".needs-validation");
+
+    if (form.checkValidity()) {
+        // Aqui se muestra el gif de cargando
+        $("#modal").show();
+        // Aqui se hace el submit
+        // $("#form).submit();
+        console.log("Se realiza el submit")
+    }
+
+    form.classList.add('was-validated');
+
+}

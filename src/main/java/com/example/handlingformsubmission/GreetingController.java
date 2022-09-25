@@ -112,7 +112,8 @@ public class GreetingController {
     ModelAndView index(@CookieValue(name = "token", required = false) String token) {
 
         // Válida el token, en caso de que el token NO SEA VÁLIDO redirecciona al login. Si el token es VÁLIDO redirecciona al home (vista result)
-        ModelAndView model = new ModelAndView(greetingService.validToken(token, "index")).addObject("propertiesFields", readJson());
+//        ModelAndView model = new ModelAndView(greetingService.validToken(token, "index")).addObject("propertiesFields", readJson());
+        ModelAndView model = new ModelAndView("index").addObject("propertiesFields", readJson());
         model.addObject("greeting", new Greeting())
                 .addObject("global", variableglobal1);
 
